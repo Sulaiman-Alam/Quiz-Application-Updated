@@ -1,14 +1,11 @@
-const http = require("http");
-const fs = require("fs");
-
+const express = require("express");
+const path = require("path");
 const port = 3500;
-const server = http.createServer();
+const server = express();
 
-server.on("listening", () => {
-    console.log(`Server listening on port ${port}`)
-});
+server.use(express.static('.'));
 
-let urlObjects = [
+let links = [
     { url: "/", filepath: "Home/home.html" },
     { url: "/home.css", filepath: "Home/home.css" },
     { url: "/home.js", filepath: "Home/home.js" },
@@ -34,14 +31,12 @@ let urlObjects = [
     { url: "/Results/results.js", filepath: "Results/results.js" }
 ];
 
-server.on("request", (req, res) => {
-    const url = req.url;
-    console.log(url);
-    for (let i = 0; i < urlObjects.length; i++) {
-        if (url === urlObjects[i].url) {
-            fs.createReadStream(urlObjects[i].filepath).pipe(res);
-        }
-    }
-});
+for (let i = 0; i < links.length; i++) {
+    server.get(links[i].url, (req, res) => {
+        res.sendFile(path.join(__dirname, links[i].filepath));
+    })
+}
 
-server.listen(port);
+server.listen(port, () => {
+    console.log(`Express listetning on port ${port}`);
+})
