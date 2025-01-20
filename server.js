@@ -38,5 +38,5 @@ for (let i = 0; i < links.length; i++) {
 }
 
 server.listen(port, () => {
-    console.log(`Express listetning on port ${port}`);
+    console.log(`Express listening on port ${port}`);
 })
