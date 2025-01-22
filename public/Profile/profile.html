@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Results</title>
+   <title>Profile</title>
 
 
    <!-- Boostrap Links -->
@@ -17,7 +18,7 @@
        crossorigin="anonymous"></script>
 
 
-   <link rel="stylesheet" href="results.css" />
+   <link rel="stylesheet" href="profile.css" />
 </head>
 
 
@@ -28,9 +29,9 @@
     <div class="logo"> ThinkStorm </div>
     <div>
     <ul class = "nav-links">
-        <li><a href="/index.html">Home</a></li>
+        <li><a href="/Home/home.html">Home</a></li>
         <li><a href="/Game/game.html">Game</a></li>
-        <li><a href="/Profile/profile.html">Profile</a></li>
+       
         
      </ul>
 </div>
@@ -40,18 +41,36 @@
 
    <div>
        <header>
-           <h1>Results Of Your Quiz!</h1>
+           <!-- <h1>profile</h1> -->
        </header>
    </div>
 
 
-   <div class="cont">
-       <strong>Name: </strong><span id="currentUser"></span>
-       <br>
-       <strong>Score: </strong><span id="score"> </span> out of <span id="total"> </span>
-       <br>
-       <strong>Feedback: </strong><span id="feedback"></span></li>
-   </div>
+   <div class="container">
+    <h1>Welcome, <span id="currentUser"></span></h1>
+    <p>Here are your quiz results</p>
+    
+    <div class="profile-section">
+        <h2>Game History</h2>
+        <table id="playHistory">
+            <h3>Score</h3>
+            <thead>
+                <tr>
+                    <!-- <th>Quiz Date</th> -->
+                    <!-- <th> Score </th> -->
+                    
+                    <span id="score"> </span> / <span id="total"> </span>
+
+                    <!-- <th>Category</th> -->
+                </tr>
+            </thead>
+            <tbody>
+               
+
+            </tbody>
+        </table>
+    </div>
+</div>
 
 
    <div>
@@ -72,8 +91,5 @@
        crossorigin="anonymous"></script>
 
 
-   <script src="results.js"></script>
+   <script src="profile.js"></script>
 </body>
-
-
-</html>
