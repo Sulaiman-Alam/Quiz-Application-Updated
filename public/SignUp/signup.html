@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <header>
+        <h1>Create an Account</h1>
+        <h3>Join us and get started today</h3>
+    </header>
+    <div class="cont">
+        <form action="/signup" method="POST">
+            <div>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required
+                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 15px;">
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required
+                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 15px;">
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required
+                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 15px;">
+            </div>
+            <a href="Game\game.html"><button type="submit" class="button">Sign Up</button></a>
+        </form>
+    </div>
+    <!-- <footer>
+        <p>Already have an account? <a href="SignIn\signin.html">Sign in here</a></p>
+    </footer> -->
+</body>
+
+</html>
